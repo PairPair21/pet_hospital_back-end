@@ -77,15 +77,15 @@ app.post("/addOrder", auth, async (req, res) => {
   addOrder(req, res);
 });
 
-app.get("/medicine", async (req, res) => {
+app.get("/medicine", auth, async (req, res) => {
   getmed(req, res);
 });
 
-app.get("/user", async (req, res) => {
+app.get("/user", auth, async (req, res) => {
   user(req, res);
 });
 
-app.get("/employee", async (req, res) => {
+app.get("/employee", auth, async (req, res) => {
   getEmployee(req, res);
 });
 
