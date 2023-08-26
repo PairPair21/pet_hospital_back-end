@@ -61,7 +61,7 @@ app.post("/addPet", auth, async (req, res) => {
   addPet(req, res);
 });
 
-app.post("/addEmployee", auth, async (req, res) => {
+app.post("/addEmployee", async (req, res) => {
   addEmployee(req, res);
 });
 

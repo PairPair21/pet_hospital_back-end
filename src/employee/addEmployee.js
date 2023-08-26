@@ -5,11 +5,6 @@ const exec = async (req, res) => {
   let client = await pool.connect();
   await client.query("BEGIN");
   let responseData = {};
-  let tokenObj = {
-    id: req._user.id,
-    username: req._user.username,
-    role: req._user.role,
-  };
 
   try {
     let data = req.body;
@@ -47,7 +42,6 @@ const exec = async (req, res) => {
   } finally {
     client.release();
   }
-  responseData._token = await common.commonService.generateToken(tokenObj);
   res.status(200).send(responseData);
   return res.end();
 };
