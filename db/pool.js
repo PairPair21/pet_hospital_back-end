@@ -1,8 +1,11 @@
 const { Pool, Client } = require("pg");
 
 const pool = new Pool({
-  connectionString:
-    "postgres://ltbjcuvi:UYKzdaQFCQ3FyArRw92rcQpsZiw7VCP4@bubble.db.elephantsql.com/ltbjcuvi",
+  user: "admin",
+  host: "localhost",
+  database: "pet_hospital",
+  password: "admin",
+  port: 54320,
 });
 
 module.exports = pool;
